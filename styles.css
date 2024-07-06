@@ -1,0 +1,172 @@
+/* Reset default browser styles and set global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Styles for the header */
+header {
+    background: linear-gradient(to right, black, black);
+    color: plum;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 2s;
+    position: relative; /* Ensure the header stays at the top */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.header-text {
+    text-align: left; /* Align text to the left */
+    max-width: 60%; /* Limit text width */
+    margin-left: 2rem; /* Add margin to separate text from image */
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header img {
+    max-width: 30%; /* Ensure the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin-right: 2rem; /* Adjust margin to separate image from text */
+}
+
+/* Styles for the navigation menu */
+nav {
+    background: black;
+    color: black;
+    text-align: right; /* Align links to the right */
+    padding: 1rem; /* Adjust padding for spacing */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Display list items inline */
+    margin-left: 1rem; /* Adjust margin between items */
+}
+
+nav ul li a {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+}
+
+nav ul li a:hover {
+    color: #81C784;
+}
+
+/* Styles for sections and lists */
+section {
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+    animation: fadeInUp 2s;
+}
+
+section h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section ul li {
+    background: black;
+    border: 1px solid #ddd;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project {
+    background: black;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Styles for the footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer .social-media {
+    margin-bottom: 1rem;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #81C784;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
