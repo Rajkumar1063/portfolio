@@ -4,14 +4,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #1a1a1a;
     color: #fff;
     scroll-behavior: smooth;
 }
 
 /* Styles for the header */
 header {
-    background: linear-gradient(to right, black, black);
+    background: linear-gradient(to right, #333, #111);
     color: plum;
     padding: 2rem;
     text-align: center;
@@ -23,6 +23,7 @@ header {
     display: flex;
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap;
 }
 
 .header-text {
@@ -50,8 +51,8 @@ header img {
 
 /* Styles for the navigation menu */
 nav {
-    background: black;
-    color: black;
+    background: #111;
+    color: white;
     text-align: right; /* Align links to the right */
     padding: 1rem; /* Adjust padding for spacing */
     position: sticky;
@@ -71,7 +72,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: blue;
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -104,16 +105,16 @@ ul {
 }
 
 section ul li {
-    background: black;
-    border: 1px solid #ddd;
+    background: #222;
+    border: 1px solid #444;
     margin: 0.5rem 0;
     padding: 0.75rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .project {
-    background: black;
-    border: 1px solid #ddd;
+    background: #222;
+    border: 1px solid #444;
     margin: 1rem 0;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -125,32 +126,61 @@ section ul li {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Styles for the footer */
 footer {
-    background: #333;
+    background: #111;
     color: #fff;
-    padding: 1.5rem 0;
+    padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
 }
 
-footer .social-media {
-    margin-bottom: 1rem;
+footer p {
+    margin: 0.5rem 0;
 }
 
-footer .social-media a {
+/* Styles for social media links */
+.social-media {
+    margin: 1rem 0;
+}
+
+.social-media a {
     color: #fff;
-    margin: 0 0.5rem;
-    text-decoration: none;
     font-size: 1.5rem;
+    margin: 0 0.5rem;
     transition: color 0.3s;
 }
 
-footer .social-media a:hover {
+.social-media a:hover {
     color: #81C784;
 }
 
-/* Keyframe animations */
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .header-text {
+        max-width: 100%; /* Allow text to take full width */
+        margin: 0; /* Remove margin */
+    }
+
+    header img {
+        max-width: 80%; /* Adjust image width */
+        margin: 1rem auto; /* Center image */
+    }
+
+    nav ul {
+        text-align: center; /* Center-align navigation */
+    }
+
+    nav ul li {
+        display: block; /* Display items in a column */
+        margin: 0.5rem 0; /* Adjust margin for spacing */
+    }
+}
+
+/* Keyframes for animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
