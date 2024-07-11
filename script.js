@@ -1,14 +1,14 @@
-// Wait until the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all links
-    var navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
             window.scrollTo({
-                top: targetElement.offsetTop - document.querySelector('nav').offsetHeight,
+                top: targetSection.offsetTop - 50,
                 behavior: 'smooth'
             });
         });
